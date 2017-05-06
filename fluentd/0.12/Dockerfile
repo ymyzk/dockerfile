@@ -7,7 +7,7 @@ RUN apt-get update \
         && rm -rf /var/lib/apt/lists/*
 
 RUN gem install --no-document fluentd -v "~> 0.12.0"
-RUN gem install --no-document fluent-plugin-bigquery -v "~> 0.3.0"
+RUN gem install --no-document fluent-plugin-bigquery -v "~> 0.4.0"
 RUN gem install --no-document fluent-plugin-elasticsearch -v "~> 1.9.0"
 RUN gem install --no-document fluent-plugin-rewrite-tag-filter
 
