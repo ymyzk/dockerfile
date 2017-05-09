@@ -9,7 +9,7 @@ RUN apt-get update \
 RUN gem install --no-document fluentd -v "~> 0.12.0"
 RUN gem install --no-document fluent-plugin-bigquery -v "~> 0.4.0"
 RUN gem install --no-document fluent-plugin-elasticsearch -v "~> 1.9.0"
-RUN gem install --no-document fluent-plugin-rewrite-tag-filter
+RUN gem install --no-document fluent-plugin-rewrite-tag-filter -v "~> 1.5.0"
 
 RUN mkdir -p /fluentd/etc
 RUN mkdir -p /fluentd/log
