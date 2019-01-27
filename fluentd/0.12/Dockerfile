@@ -6,10 +6,9 @@ RUN apt-get update \
             build-essential \
         && rm -rf /var/lib/apt/lists/*
 
-RUN gem install --no-document fluentd -v "~> 0.12.0"
-RUN gem install --no-document fluent-plugin-bigquery -v "~> 0.4.0"
-RUN gem install --no-document fluent-plugin-elasticsearch -v "~> 1.13.0"
-RUN gem install --no-document fluent-plugin-rewrite-tag-filter -v "~> 1.6.0"
+COPY Gemfile Gemfile.lock /fluentd/
+WORKDIR /fluentd
+RUN bundle install
 
 RUN mkdir -p /fluentd/etc
 RUN mkdir -p /fluentd/log
