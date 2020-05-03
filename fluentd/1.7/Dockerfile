@@ -9,9 +9,9 @@ RUN apk add --no-cache --update --virtual .build-deps \
         sudo build-base ruby-dev \
  && sudo gem install \
       fluent-plugin-bigquery:2.2.0 \
-      fluent-plugin-elasticsearch:3.5.5 \
-      fluent-plugin-rewrite-tag-filter:2.2.0 \
-      fluent-plugin-prometheus:1.6.0 \
+      fluent-plugin-elasticsearch:4.0.7 \
+      fluent-plugin-rewrite-tag-filter:2.3.0 \
+      fluent-plugin-prometheus:1.7.3 \
  && sudo gem sources --clear-all \
  && apk del .build-deps \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
